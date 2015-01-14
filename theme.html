@@ -270,7 +270,13 @@
               <h2 class="widget-title"> Timeline</h4>
               <h3>2015</h3>
               <ul>
-                <li><a href="/tag/2015-jan" class="{{ set_active('/tag/2015-jan') }}">January</a></li>                
+                <li><a href="/tag/2015-jan" class="{{ set_active('/tag/2015-jan') }}">January
+                {% for tag in site.tags %}
+                    {% if tag.name == "#2015-jan" %}
+                    {{ tag.count }}
+                    {% endif %}
+                {% endfor %}
+                </a></li>                
               </ul>
               <h3>2014</h3>
               <ul>
