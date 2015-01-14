@@ -278,6 +278,9 @@
                 {% endfor %}
                 </a></li>                
               </ul>
+              {% for tag in site.tags %}
+                {{ tag|format_tag(humanize=True) }} ({{ tag.count}} )
+               {% endfor %}
               <h3>2014</h3>
               <ul>
                 <li><a href="/tag/2014-dec" class="{{ set_active('/tag/2014-dec') }}">December</a></li>                
