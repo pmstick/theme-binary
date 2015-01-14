@@ -264,6 +264,21 @@
                 {% endif %}
               </div>
             </div>
+            
+            {% if site.tags %}
+            <nav class="categories">
+              <h4>Timeline</h4>
+              <h3>2015</h3>
+              <ul>
+                <li><a href="/tag/2015-jan" class="{{ set_active('/tag/2015-jan') }}">January</a></li>                
+              </ul>
+              <h3>2014</h3>
+              <ul>
+                <li><a href="/tag/2014-dec" class="{{ set_active('/tag/2014-dec') }}">December</a></li>                
+              </ul>
+            </nav>
+            {% endif %}
+            
             <div class="widget widget-tagcloud">
               <h2 class="widget-title">Tag Cloud</h2>
               <div class="widget-content tag-cloud">
