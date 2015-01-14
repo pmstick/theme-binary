@@ -273,7 +273,9 @@
                 <li><a href="/tag/2015-jan" class="{{ set_active('/tag/2015-jan') }}">January
                 {% for tag in site.tags %}
                     {% if tag.name == "2015-jan" %}
-                    {{ tag.count }} {{ tag.name }}
+                        {% for post in posts %}
+                        <a href="{{ post.permalink }}">{{ post.title }}</a>
+                        {% endfor %}
                     {% endif %}
                 {% endfor %}
                 </a></li>                
