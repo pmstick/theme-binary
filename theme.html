@@ -270,22 +270,29 @@
               <h2 class="widget-title"> Timeline</h4>
               <h3>2015</h3>
               <ul>
-                <li><a href="/tag/2015-jan" class="{{ set_active('/tag/2015-jan') }}">January
+                <h4><a href="/tag/2015-jan" class="{{ set_active('/tag/2015-jan') }}">January</a></h4>                
                 {% for tag in site.tags %}
-                    {% if tag.name == "2015-jan" %}
+                    {% if tag.name == "2015-jan" %}                
                         {% for post in posts %}
-                        <a href="{{ post.permalink }}">{{ post.title }}</a>
+                        <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
                         {% endfor %}
                     {% endif %}
-                {% endfor %}
-                </a></li>                
+                {% endfor %}                
               </ul>
               {% for tag in site.tags %}
                 {{ tag|format_tag(humanize=True) }} ({{ tag.count}} )
                {% endfor %}
               <h3>2014</h3>
               <ul>
-                <li><a href="/tag/2014-dec" class="{{ set_active('/tag/2014-dec') }}">December</a></li>                
+                <h4><a href="/tag/2014-dec" class="{{ set_active('/tag/2014-dec') }}">December</a></h4>
+                {% for tag in site.tags %}
+                    {% if tag.name == "2014-dec" %}                
+                        {% for post in posts %}
+                        <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+                
               </ul>
             </nav>
             {% endif %}
